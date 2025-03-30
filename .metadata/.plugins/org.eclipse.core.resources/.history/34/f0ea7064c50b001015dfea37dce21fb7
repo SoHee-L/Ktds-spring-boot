@@ -1,0 +1,44 @@
+package com.ktdsuniversity.edu.lsh.bbs.dao;
+
+import java.util.List;
+
+import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.ktdsuniversity.edu.lsh.bbs.vo.BoardVO;
+
+@Repository
+public class BoardDaoImpl extends SqlSessionDaoSupport implements BoardDao {
+	
+	@Autowired
+	@Override
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSessionTemplate) {
+		super.setSqlSessionTemplate(sqlSessionTemplate);
+	}
+
+	
+	@Override
+	public int selectBoardAllCount() {
+		return 0;
+	}
+	
+	@Override
+	public List<BoardVO> selectAllBoard() {
+		return null;
+	}
+	@Override
+	public int insertNewBoard(BoardVO boardVO) {
+		// getSqlSession().insert()는 insert한 Row의 개수를 반환한다.
+		return getSqlSession().insert("insertNewBoard", boardVO);
+	}
+	@Override
+	public int increaseViewCount(int id) {
+		return getSqlSession().update("increaseViewCount", id);
+	}
+	@Override
+	public BoardVO insertOneBoard(int id) {
+		return getSqlSession().selectOne("getOneBoard", id);
+	}
+}

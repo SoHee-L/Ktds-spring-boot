@@ -1,0 +1,8 @@
+package com.ktdsuniversity.edu.lsh.bbs.service;
+
+import com.ktdsuniversity.edu.lsh.bbs.vo.BoardListVO;
+
+public interface BoardService {
+	
+	public BoardListVO selectAllBoard();
+}

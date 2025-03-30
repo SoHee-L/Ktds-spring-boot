@@ -1,0 +1,23 @@
+package com.ktdsuniversity.edu.lsh.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class BoardController {
+    @Autowired
+    private BoardService boardService;
+    
+    @GetMapping("/board/list")
+    public ModelAndView viewBoardList() {
+        BoardListVO boardListVO = boardService.getAllBoard();
+        
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("board/boardlist");
+        modelAndView.addObject("boardList", boardListVO);
+        return modelAndView;
+    }
+
+
+}
+	

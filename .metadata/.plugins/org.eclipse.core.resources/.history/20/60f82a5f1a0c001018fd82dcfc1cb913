@@ -1,0 +1,13 @@
+package com.ktdsuniversity.edu.lsh.bbs.service;
+
+import com.ktdsuniversity.edu.lsh.bbs.vo.BoardListVO;
+import com.ktdsuniversity.edu.lsh.bbs.vo.BoardVO;
+
+public interface BoardService {
+	
+	public BoardListVO selectAllBoard();
+	public boolean insertNewBoard(BoardVO boardVO);
+//	public BoardVO selectOneBoard(int id, boolean isIncrease);
+
+
+}

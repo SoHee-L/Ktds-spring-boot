@@ -1,0 +1,17 @@
+package com.ktdsuniversity.edu.lsh.bbs.dao;
+
+import java.util.List;
+
+import com.ktdsuniversity.edu.lsh.bbs.vo.BoardVO;
+
+public class BoardDaoImpl implements BoardDao {
+	public int insertBoardAllCount() {
+		return 0;
+	}
+	
+	public List<BoardVO> insertAllBoard() {
+		return null;
+	}
+
+
+}

@@ -1,0 +1,5 @@
+package com.ktdsuniversity.edu.lsh.web;
+
+public class HelloBootController {
+
+}

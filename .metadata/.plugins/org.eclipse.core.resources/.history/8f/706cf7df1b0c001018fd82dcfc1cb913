@@ -1,0 +1,13 @@
+package com.ktdsuniversity.edu.lsh;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class HelloSpringLshApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(HelloSpringLshApplication.class, args);
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.ktdsuniversity.edu.lsh.bbs.dao;
+
+public interface BoardDao {
+
+}
